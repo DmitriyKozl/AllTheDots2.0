@@ -13,7 +13,7 @@ interface NavbarProps {
 }
 
 const Navigation: React.FC<NavbarProps> = ({
-  logo = <img className='max-w-40' src='src\assets\logo.svg'></img>,
+  logo = <img className='max-w-40' src='./logo.svg'></img>,
   navItems = [
     { label: "Services", href: "#Services" },
     { label: "Tools", href: "#Tools" },

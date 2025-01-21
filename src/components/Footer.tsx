@@ -24,7 +24,7 @@ const Footer = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-2xl font-bold text-gray-900 mb-4"><img className='max-w-40' src='src\assets\logo.svg'></img></h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4"><img className='max-w-40' src='./logo.svg'></img></h2>
                 <p className="text-gray-600 mb-6">
                   Connecting Lifelines of organizations
                 </p>

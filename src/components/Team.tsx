@@ -142,28 +142,28 @@ const TeamMemberCard = ({ image, name, role, quote, linkedin }) => {
 const Team = () => {
     const teamMembers = [
         {
-            image: "/src/assets/Nathan.png",
+            image: "./Nathan.png",
             name: "Nathan Moerman",
             role: "Managing partner/Integration Architect",
             quote: "Building bridges between systems and people",
             linkedin: "https://www.linkedin.com/in/nathan-moerman-88bab8b/"
         },
         {
-            image: "/src/assets/Robert.png",
+            image: "./Robert.png",
             name: "Robert Maes",
             role: "Managing partner/Azure Integration Architect",
             quote: "Making cloud integration seamless and efficient",
             linkedin: "https://www.linkedin.com/in/robert-maes-b82ab120/"
         },
         {
-            image: "/src/assets/Iemen.png",
+            image: "./Iemen.png",
             name: "Iemen Uyttenhove",
             role: "Azure Consultant",
             quote: "Creating connections that matter",
             linkedin: "https://www.linkedin.com/in/iemenuyttenhove/"
         },
         {
-            image: "/src/assets/Falco.png",
+            image: "./Falco.png",
             name: "Falco Lannoo",
             role: "Azure & Integration Consultant",
 
@@ -171,7 +171,7 @@ const Team = () => {
             linkedin: "https://www.linkedin.com/in/falco-lannoo/"
         },
         {
-            image: "/src/assets/Dmitriy.png",
+            image: "./Dmitriy.png",
             name: "Dmitriy Kozlov",
             role: "Integration Consultant & Software Developer",
 
@@ -180,7 +180,7 @@ const Team = () => {
 
         },
         {
-            image: "/src/assets/Brecht.png",
+            image: "./Brecht.png",
             name: "Brecht Tournoij",
             role: "Integration Consultant",
             quote: "Mastering enterprise integration",

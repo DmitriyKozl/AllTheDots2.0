@@ -115,7 +115,7 @@ const CenterLogo = ({ x, y, isAnyHovered }) => (
       }
     />
     <image
-      href="/src/assets/icon.svg"
+      href="./icon.svg"
       width="300"
       height="300"
       x="-150"
@@ -305,5 +305,4 @@ const IntegrationDiagram = () => {
     </div>
   );
 };
-
 export default IntegrationDiagram;

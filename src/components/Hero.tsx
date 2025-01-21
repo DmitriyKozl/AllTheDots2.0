@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({
                     {/* Image Container */}
                     <div className="relative w-full h-full flex justify-center items-center">
 
-                        <img src="/src/assets/hero.png" alt="" className='w-4/5 ' />
+                        <img src="./hero.png" alt="" className='w-4/5 ' />
 
                     </div>
                 </div>
