@@ -151,7 +151,7 @@ const Team = () => {
         {
             image: "./Robert.png",
             name: "Robert Maes",
-            role: "Managing partner/Azure Integration Architect",
+            role: "Managing partner/Integration Architect",
             quote: "Making cloud integration seamless and efficient",
             linkedin: "https://www.linkedin.com/in/robert-maes-b82ab120/"
         },

@@ -59,7 +59,7 @@ const CircleNode = ({ x, y, title, description, Icon, isAnyHovered, onHover }) =
       }}
     >
       <circle
-        r={isHovered ? "100" : "95"}
+        r={isHovered ? "120" : "115"}
         className="transition-all duration-500 cursor-pointer"
         fill="white"
         stroke={isHovered ? "url(#circleGradient)" : "#2e4fca"}
@@ -89,7 +89,7 @@ const CircleNode = ({ x, y, title, description, Icon, isAnyHovered, onHover }) =
           <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-sm 
                     border border-white/20 shadow-xl hover:shadow-2xl
                     transition-all duration-300 group">
-            <div className="text-gray-600 text-lg">{description}</div>
+            <div className="text-gray-900 text-lg">{description}</div>
             <div className="absolute inset-0 rounded-2xl opacity-100
                           transition-opacity duration-300 pointer-events-none
                           bg-gradient-to-r from-[#54d5d5]/5 via-[#2e4fca]/5 to-[#df264b]/5">
@@ -137,19 +137,19 @@ const IntegrationDiagram = () => {
   const [hoveredNode, setHoveredNode] = useState(null);
   const centerX = 1000;
   const centerY = 600;
-  const nodeCount = 6;
+  const nodeCount = 5;
 
   const baseRadius = 600;
   const radiusVariations = [
-    baseRadius * 0.8,
+    baseRadius * 0.7,
     baseRadius * 0.7,
     baseRadius * 0.6,
     baseRadius * 0.7,
-    baseRadius * 0.8,
+    baseRadius * 0.9,
     baseRadius * 1
   ];
 
-  const angleVariations = [0, -25, -15, 25, 60];
+  const angleVariations = [35, 25, 25, 25, 25];
 
   const nodes = [
     {
@@ -173,7 +173,7 @@ const IntegrationDiagram = () => {
       Icon: Network
     },
     {
-      title: "BizTalk Integration",
+      title: "BizTalk",
       description: "Microsoft BizTalk Server is a powerful tool for business process management and enterprise application integration. We help with development and optimization of solutions.",
       Icon: Server
     }
