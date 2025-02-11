@@ -83,51 +83,47 @@ const TeamMemberCard = ({ image, name, role, quote, linkedin }) => {
             viewport={{ once: true }}
             className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-sm 
                 border border-white/20 shadow-xl hover:shadow-2xl
-                transition-all duration-300 group"
+                transition-all duration-300 group h-full"
         >
-            <div className="flex flex-col items-center text-center">
-
-                <div className="relative w-32 h-32 mb-6">
-                    {/* Gradient border ring */}
-                    <div className="absolute inset-0 rounded-full p-[4px] bg-gradient-to-r from-[#54d5d5] via-[#2e4fca] to-[#df264b]">
-                        {/* Inner container with website gradient background */}
-                        <div className="w-full h-full rounded-full overflow-hidden"
-                            style={{
-                                background: 'linear-gradient(160deg, rgba(255, 255, 255, 1) 20%, rgba(235, 238, 250, 1) 30%, rgba(211, 217, 244, 1) 43%, rgba(214, 169, 199, 1) 74%, rgba(223, 38, 75, 1) 140%)'
-                            }}>
-                            <img
-                                src={image}
-                                alt={name}
-                                className="w-full h-full object-cover object-top"
-                            />
+            <div className="flex flex-col items-center text-center h-full">
+                {/* Top content section */}
+                <div className="flex-grow flex flex-col items-center">
+                    <div className="relative w-36 h-36 mb-6">
+                        {/* Gradient border ring */}
+                        <div className="absolute inset-0 rounded-full p-[4px] bg-gradient-to-r from-[#54d5d5] via-[#2e4fca] to-[#df264b]">
+                            {/* Inner container with website gradient background */}
+                            <div className="w-full h-full rounded-full overflow-hidden"
+                                style={{
+                                    background: 'linear-gradient(160deg, rgba(255, 255, 255, 1) 20%, rgba(235, 238, 250, 1) 30%, rgba(211, 217, 244, 1) 43%, rgba(214, 169, 199, 1) 74%, rgba(223, 38, 75, 1) 140%)'
+                                }}>
+                                <img
+                                    src={image}
+                                    alt={name}
+                                    className="w-full h-full object-cover object-top"
+                                />
+                            </div>
                         </div>
                     </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
+                    <p className="text-gray-600 mb-4">{role}</p>
+                    <div className="text-gray-700 text-lg mb-6 italic">"{quote}"</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
-                <p className="text-gray-600 mb-4">{role}</p>
 
-                <div className="text-gray-700 text-lg mb-6 italic">"{quote}"</div>
-
-                <div className="flex space-x-4">
-                    <a
-                        href={linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-white/10 backdrop-blur-sm 
-                     border border-white/20 hover:border-[#2e4fca]/20
-                     text-gray-600 hover:text-[#2e4fca] 
-                     transition-colors duration-300"
-                    >
-                        <Linkedin className="w-5 h-5" />
-                    </a>
-                    {/* <button
-                        className="p-2 rounded-full bg-white/10 backdrop-blur-sm 
-                     border border-white/20 hover:border-[#2e4fca]/20
-                     text-gray-600 hover:text-[#2e4fca] 
-                     transition-colors duration-300"
-                    >
-                        <Mail className="w-5 h-5" />
-                    </button> */}
+                {/* Bottom section with LinkedIn - will stay at bottom */}
+                <div className="mt-auto">
+                    <div className="flex space-x-4">
+                        <a
+                            href={linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="p-2 rounded-full bg-white/10 backdrop-blur-sm 
+                         border border-white/20 hover:border-[#2e4fca]/20
+                         text-gray-600 hover:text-[#2e4fca] 
+                         transition-colors duration-300"
+                        >
+                            <Linkedin className="w-5 h-5" />
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -141,20 +137,6 @@ const TeamMemberCard = ({ image, name, role, quote, linkedin }) => {
 
 const Team = () => {
     const teamMembers = [
-        {
-            image: "./Nathan.png",
-            name: "Nathan Moerman",
-            role: "Managing partner/Integration Architect",
-            quote: "Building bridges between systems and people",
-            linkedin: "https://www.linkedin.com/in/nathan-moerman-88bab8b/"
-        },
-        {
-            image: "./Robert.png",
-            name: "Robert Maes",
-            role: "Managing partner/Integration Architect",
-            quote: "Making cloud integration seamless and efficient",
-            linkedin: "https://www.linkedin.com/in/robert-maes-b82ab120/"
-        },
         {
             image: "./Iemen.png",
             name: "Iemen Uyttenhove",
@@ -185,7 +167,29 @@ const Team = () => {
             role: "Integration Consultant",
             quote: "Mastering enterprise integration",
             linkedin: "https://www.linkedin.com/in/brecht-tournoij-729b64256/"
-        }
+        },
+        {
+            image: "./Lawrence.png",
+            name: "Lawrence Verbruggen",
+            role: "Integration Consultant",
+            quote: "Bridging complexity with elegant solutions",
+            linkedin: "https://www.linkedin.com/in/lawrenceverbruggen/"
+        },
+        {
+            image: "./Nathan.png",
+            name: "Nathan Moerman",
+            role: "Managing partner/Integration Architect",
+            quote: "Building bridges between systems and people",
+            linkedin: "https://www.linkedin.com/in/nathan-moerman-88bab8b/"
+        },
+        {
+            image: "./Robert.png",
+            name: "Robert Maes",
+            role: "Managing partner/Integration Architect",
+            quote: "Making cloud integration seamless and efficient",
+            linkedin: "https://www.linkedin.com/in/robert-maes-b82ab120/"
+        },
+
     ];
 
     // Split the team members into two arrays
@@ -223,21 +227,21 @@ const Team = () => {
                     </motion.div>
                 </div>
 
-                {/* Managing Partners Row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                    {managingPartners.map((member, index) => (
+                {/* Team Members Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-4">
+                    {teamMembers.slice(0, 5).map((member, index) => (
                         <TeamMemberCard
-                            key={`partner-${index}`}
+                            key={`member-${index}`}
                             {...member}
                         />
                     ))}
                 </div>
 
-                {/* Consultants Row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {consultants.map((member, index) => (
+                {/* Additional Team Members */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
+                    {teamMembers.slice(5).map((member, index) => (
                         <TeamMemberCard
-                            key={`consultant-${index}`}
+                            key={`additional-${index}`}
                             {...member}
                         />
                     ))}
