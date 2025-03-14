@@ -105,7 +105,7 @@ const TeamMemberCard = ({ image, name, role, quote, linkedin }) => {
                         </div>
                     </div>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{name}</h3>
-                    <p className="text-gray-600 mb-4">{role}</p>
+                    <p className="text-gray-600 mb-4 h-6 max-w-[200px] mx-auto text-center">{role}</p>
                     <div className="text-gray-700 text-lg mb-6 italic">"{quote}"</div>
                 </div>
 
